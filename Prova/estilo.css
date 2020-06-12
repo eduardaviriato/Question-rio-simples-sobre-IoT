@@ -1,0 +1,162 @@
+body {
+        background-image: url(5d5bfd99d5414-lg.jpg);
+        font-family: arial, sans-serif;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: justify;
+        color: #000000;
+        opacity: 0.9;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+}
+
+
+button{
+
+  font-family: calibri, times new roman, verdana, arial, sans-serif;
+   font-size: 16pt;
+   font-weight: bold;
+   padding: 10px;
+   background-color:#000000; 
+   color: #ffffff;
+   text-decoration: none;
+   border: 2px solid #CCC;
+    border-radius: 0.5em;
+
+}
+.linkbotao {    font-family: calibri, times new roman, verdana, arial, sans-serif;
+   font-size: 16pt;
+   font-weight: bold;
+   padding: 18px;
+   background-color:  #0066cc; 
+   color: #ffffff;
+   text-decoration: none;
+   border: 2px solid #CCC;
+    border-radius: 0.5em;
+}
+}
+.linkbotao:link,
+.linkbotao:visited {
+   border-top: 1px solid #cccccc;
+   border-bottom: 2px solid #666666;
+   border-left: 2px solid #cccccc;
+   border-right: 2px solid #666666;
+}
+.linkbotao:hover {
+    border-bottom: 2px solid #cccccc;
+   border-top: 6px solid #666666;
+   border-right: 2px solid #cccccc;
+   border-left: 4px solid #666666;
+}
+
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    background-color:#99b3ff ; 
+    width: 880px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+div {
+    display: block;
+}
+
+
+/* Navbar container parte que fica as palavra dentro  */
+.navbar {
+  overflow: hidden;
+  background-color: #ffcce6;
+  font-family: Arial;
+}
+
+/* Links inside the navbar a tag a*/
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button da tag que tem a lista*/
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: #000000;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.du {
+  overflow: hidden;
+  background-color: #00b8e6;
+  font-family: Arial;
+}
+.du a{
+  float: left;
+  font-size: 16px;
+  color: #000000;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+footer {
+  color: #ffffff;
+  height: 300px;
+  background: #80bfff;
+  z-index: 1000;
+  position: relative;
+  margin: 0 auto;
+  padding: 50px ;
+  font-family: Roboto,Arial,Helvetica,Sans-serif;
+}

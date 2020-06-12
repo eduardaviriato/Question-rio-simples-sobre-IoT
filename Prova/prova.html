@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" type="text/css" href="estilo.css" />
+ <script type="text/javascript" src="script.js"></script> 
+  <meta charset="utf-8">
+    <title>Prova IoT</title>
+    	
+
+</head>
+<body onload="javascript:aoCarregar();">
+	
+<form id="my-form" name ="nome do questionario" method = "post" action="">
+	<center><h1>Internet das Coisas </h1></center>
+
+
+
+  <section id="quiz">
+  	<hr/>
+	<input type="hidden" id="perguntaActual" value=""/><br />
+	<div  id="pergunta1"class="qans-level">Passo 1 de 7
+	<h3 >Quais são os  blocos básicos do IoT?</h3>
+		<INPUT TYPE="RADIO"  NAME="OPCAO01" class="radioCheck" VALUE="a"> a) Identificação, Sensores/Atuadores,  
+                    Comunicação, Computação, Serviços e Semântica <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO01" class="radioCheck" VALUE="b"> b) Identeficação, Sensores/Atuadoris,  
+                    Comunicação, Computação, Serviços e Semântica. <br>
+        <INPUT type="radio" name="OPCAO01" class="radioCheck" value="c" > c) Identificação, Sensores/Atuadores,  
+                    Comunicação, Computação, Serviços e Semantica
+	</div>
+	<div id="pergunta2" class="qans-level">Passo 2 de 7
+	<h3> O que são sensores?</h3>
+	<textarea  name="OPCAO02" rows="4" cols="105"></textarea>		
+	</div>
+	<div  id="pergunta3"class="qans-level">Passo 3 de 7
+	<h3>Em uma residência, caracteriza uma solução de IoT a 
+                  instalação de um detector de fumaças capaz de gerar 
+                  alertas em caso de fumaça e ser acionado,
+                   a partir de um smartphone, para iniciar um mecanismo de reação.</h3>
+		<INPUT TYPE="RADIO"  NAME="OPCAO03" class="radioCheck" VALUE="a"> a) Certo <br>
+			<br><INPUT TYPE="Radio"  NAME="OPCAO03" class="radioCheck" VALUE="b"> b) Errado <br>
+
+	</div>
+		<div id="pergunta4" class="qans-level">Passo 4 de 7
+	<h3>Explique o termo IoT?</h3>
+		<textarea  name="OPCAO02" rows="4" cols="105"></textarea>		
+
+	</div>
+	<div  id="pergunta5"class="qans-level">Passo 5 de 7
+	<h3 >Redes wi-fi e Bluetooth podem ser utilizadas para IoT, já NFC (near field
+                    communication) não atende a demandas de IoT.</h3>
+		<INPUT TYPE="RADIO"  NAME="OPCAO05"  class="radioCheck" VALUE="a"> A) Certo <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO05"  class="radioCheck" VALUE="b"> B) Errado
+	</div>
+	<div id="pergunta6" class="qans-level">Passo 6 de 7
+	<h3> Defina Atuadores?</h3>
+		<textarea  name="OPCAO06" rows="4" cols="105"></textarea>
+	</div>
+	<div  id="pergunta7"class="qans-level">Passo 7 de 7
+	<h3>Cite os nomes das três camadas e decorra sobre elas.</h3>
+		<br><textarea  name="OPCAO07" rows="4" cols="105"></textarea>
+	</div>
+	
+	<br>
+	<div class="du">
+	<a href="javascript:perguntaAnterior();"><center>Pergunta anterior</a></center>
+	<a href="javascript:proximaPergunta();"><center>Pergunta seguinte</a></center></div>
+
+  </section>
+<br><center> <button >Enviar resposta</button></center>
+
+
+	</form>
+
+	<script type="text/javascript">
+	
+	
+		document.getElementById("my-form").addEventListener("submit", function(e) {
+		
+		
+			var radioUniqueByName = [];		
+			var lastRadioUniqueByName = '';
+			var classname = document.getElementsByClassName("radioCheck");
+			
+			//Vamos capturar todos os elementos dinamicamente que tem a classe radioCheck
+			for (var i = 0; i < classname.length; i++) {
+				var nameOfButton = classname[i].getAttribute('name');
+				
+				if(nameOfButton != lastRadioUniqueByName){
+					radioUniqueByName.push(nameOfButton);
+				}
+				
+				lastRadioUniqueByName = nameOfButton;
+			}
+			
+			//Agora vamos percorrer todos os radiosButtons e ter certeza que ao menos um dos Radios esta 'checked'.
+			for(var i in radioUniqueByName){
+				
+				var atLastOneChecked = false;
+				
+				var uniqueRadio = radioUniqueByName[i];
+				var elementToCheck = document.getElementsByName(uniqueRadio);
+				
+				//for(x in elementToCheck){
+				for (var x = 0; x < classname.length; x++) {					
+				
+					// elementToCheck[x] != null  -> Evita erro de undefined
+					if(elementToCheck[x] != null && elementToCheck[x].checked !== false){
+						//Tem um elemento checado
+						atLastOneChecked = true;
+					}
+					
+				}
+				
+				//Se não tiver ao menos um checkado para a execução e retorna como false
+				if(!atLastOneChecked){
+					alert("Selecione o campo -> " + uniqueRadio);
+					e.preventDefault();
+					return false;
+				}
+			}
+		});
+		
+		
+	</script>
+</body>
+</html>
